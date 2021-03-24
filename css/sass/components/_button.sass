@@ -1,0 +1,45 @@
+.button
+  background-color: $layout-dark-color
+  border: 2px solid $layout-dark-color
+  color: $layout-light-color
+  display: inline-block
+  font-size: 1.625rem
+  font-weight: bold
+  line-height: 1
+  padding: 8px 18px
+  text-decoration: none
+  text-transform: uppercase
+  transition: .4s
+
+  @media screen and (max-width: 991px)
+    font-size: 1.2rem
+
+  @media screen and (max-width: 767px)
+    font-size: 1.1rem
+
+  &:hover
+    background-color: $layout-accent-color
+    border: 2px solid $layout-accent-color
+    box-shadow: 0 0 10px rgba(0,0,0,.3)
+    color: $layout-light-color
+    cursor: pointer
+
+  &_colored
+    background-color: $layout-accent-color
+    border: 2px solid $layout-accent-color
+
+    &:hover
+      background-color: $layout-light-color
+      color: $layout-accent-color
+
+  &_bordered
+    background-color: transparent
+    border: 2px solid $layout-dark-color-more-lighter
+    color: $layout-dark-color-more-lighter
+    padding: 10px 45px
+
+    &_colored-text
+      color: $layout-accent-color
+
+      &:hover
+        color: $layout-light-color

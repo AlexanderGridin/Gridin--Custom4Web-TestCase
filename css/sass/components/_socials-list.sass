@@ -1,0 +1,58 @@
+.socials-list
+  align-items: center
+  display: flex
+  font-size: 0
+  list-style: none
+  margin: 0
+  padding: 0
+
+  &__item
+    a
+      border-radius: 50%
+      display: inline-block
+      height: 48px
+      transition: .4s
+      width: 48px
+
+      svg
+        height: auto
+        max-width: 100%
+        width: 100%
+
+        path
+          fill: $layout-dark-color-lighter
+          transition: .4s
+
+      &:hover
+        box-shadow: 0 0 5px rgba(0,0,0,.3)
+
+        svg
+          path
+            fill: $layout-accent-color
+
+  &_lg
+    justify-content: center
+
+    & > li + li
+      margin-left: 20px
+
+  &_md
+    & > li + li
+      margin-left: 10px
+
+  &_md &
+    &__item
+      a
+        height: 23px
+        width: 23px
+
+  &_sm
+    & > li + li
+      margin-left: 7px
+
+  &_sm &
+    &__item
+      a
+        display: inline-block
+        height: 17px
+        width: 17px

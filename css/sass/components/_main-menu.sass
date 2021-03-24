@@ -1,0 +1,73 @@
+.main-menu
+  @media screen and (max-width: 991px)
+    background-color: $layout-dark-color-more-lighter
+
+  &__mobile-dropdown-button
+    background: $layout-accent-color
+    border: none
+    color: $layout-light-color
+    display: none
+    padding: 7px 15px
+
+    @media screen and (max-width: 991px)
+      display: block
+
+    &-icon
+      margin-right: 5px
+
+  &__nav-list
+    align-items: center
+    display: flex
+    justify-content: center
+    list-style: none
+    margin: 0
+    padding: 0
+
+    @media screen and (max-width: 991px)
+      align-items: flex-start
+      background-color: $layout-dark-color
+      display: none
+      flex-direction: column
+
+      &.visible
+        display: block
+
+    & > li + li
+      margin-left: 40px
+
+      @media screen and (max-width: 991px)
+        margin-left: 0
+
+    & > li
+      @media screen and (max-width: 991px)
+        width: 100%
+
+    a, a:visited
+      color: $layout-dark-color
+      font-size: 1.25rem
+      font-weight: bold
+      text-decoration: none
+      text-transform: uppercase
+      transition: .4s
+
+      @media screen and (max-width: 991px)
+        color: $layout-light-color
+        display: block
+        line-height: .8
+        padding: 10px
+        width: 100%
+
+      &:hover
+        color: $layout-accent-color
+
+        @media screen and (max-width: 991px)
+          background-color: $layout-accent-color
+          color: $layout-light-color
+
+    .current
+      a
+        color: $layout-accent-color
+
+        @media screen and (max-width: 991px)
+          background-color: $layout-accent-color
+          color: #FFF

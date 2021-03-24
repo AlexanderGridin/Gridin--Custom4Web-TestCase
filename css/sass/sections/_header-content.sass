@@ -1,0 +1,74 @@
+.header-content
+  padding: 37px 0 40px
+
+  @media screen and (max-width: 1199px)
+    padding: 37px 10px 40px
+
+  @media screen and (max-width: 991px)
+    padding: 15px 10px
+
+  & > .row
+    align-items: center
+    display: flex
+    justify-content: center
+
+    @media screen and (max-width: 1199px)
+      flex-wrap: wrap
+
+    & > .column:nth-child(1)
+      flex-shrink: 0
+      margin-right: 67px
+      max-width: 155px
+      width: 100%
+
+    & > .column:nth-child(2)
+      margin-right: 70px
+      max-width: 415px
+      width: 100%
+
+    & > .column:nth-child(3)
+      flex-shrink: 0
+      margin-right: 45px
+      max-width: 290px
+      width: 100%
+
+      @media screen and (max-width: 991px)
+        text-align: center
+
+    & > .column:nth-child(4)
+      margin-left: auto
+      max-width: 125px
+      text-align: right
+      width: 100%
+
+      @media screen and (max-width: 1199px)
+        text-align: center
+
+      & > div + div
+        margin-top: 25px
+
+    & > .column:nth-child(n+0)
+      @media screen and (max-width: 1199px)
+        margin: 10px
+
+      @media screen and (max-width: 991px)
+        align-items: center
+        display: flex
+        flex-direction: column
+        max-width: 100%
+
+  // Alter Components in section
+  .commerce-links
+    margin-left: auto
+    max-width: 60px
+    width: 100%
+
+    @media screen and (max-width: 1199px)
+      margin: auto
+      max-width: 120px
+
+  .socials-and-search
+    justify-content: flex-end
+
+    @media screen and (max-width: 1199px)
+      justify-content: center

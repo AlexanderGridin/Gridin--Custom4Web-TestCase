@@ -1,0 +1,52 @@
+.yt-video
+  background-color: $layout-dark-color
+  overflow: hidden
+  position: relative
+  width: 100%
+
+  &::after
+    content: ''
+    display: block
+    padding-top: 56.25%
+
+  iframe
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+  &_full-width
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 553px
+    width: 100%
+
+    @media screen and (max-width: 991px)
+      height: 450px
+
+    @media screen and (max-width: 767px)
+      height: 300px
+
+  &__play-button
+    background: none
+    background-color: $layout-accent-color-transparent
+    border-radius: 50%
+    border: none
+    bottom: 0
+    font-size: 0
+    height: 140px
+    left: 0
+    margin: auto
+    position: absolute
+    right: 0
+    top: 0
+    transition: .4s
+    width: 140px
+    +background-image-to-size("../imgs/arrow-right.svg", 60px, 55px)
+
+    &:hover
+      background-color: $layout-dark-color
+      box-shadow: 0 0 10px rgba(0,0,0,.3)
+      cursor: pointer

@@ -1,0 +1,39 @@
+.seasons-list
+  align-items: flex-start
+  display: flex
+  list-style: none
+  margin: 0
+  padding: 0
+  text-align: center
+
+  @media screen and (max-width: 991px)
+    flex-wrap: wrap
+    justify-content: center
+
+  & > li + li
+    margin-left: 70px
+
+    @media screen and (max-width: 991px)
+      margin-left: 15px
+
+  &__item
+    font-size: 3.4rem
+    font-weight: bold
+    line-height: .8
+    text-transform: uppercase
+
+    @media screen and (max-width: 991px)
+      margin: 15px
+
+    a, a:visited
+      color: $layout-dark-color
+      text-decoration: none
+      transition: .4s
+
+    &:hover,
+    &.current
+      a
+        color: $layout-accent-color
+
+    &-year
+      font-size: 5.6rem

@@ -1,0 +1,27 @@
+.shop-promo-item
+  border: 1px solid $layout-dark-color-lighter
+  overflow: hidden
+  position: relative
+  transition: .4s
+
+  &__img
+    display: block
+    transition: .4s
+
+  &:hover
+    border: 1px solid $layout-accent-color
+    box-shadow: 0 0 10px rgba(0,0,0,.3)
+
+  &:hover &
+    &__img
+      transform: scale(1.2) rotate(5deg)
+
+  &__link
+    bottom: 0
+    display: block
+    font-size: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 9

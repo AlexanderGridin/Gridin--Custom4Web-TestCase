@@ -1,0 +1,23 @@
+.donate-link
+  color: $layout-accent-color
+  display: inline-block
+  font-size: 1.25rem
+  font-weight: bold
+  line-height: .8
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+
+  &::after
+    background-color: $layout-accent-color
+    bottom: -3px
+    content: ""
+    display: block
+    height: 3px
+    left: 0
+    position: absolute
+    transition: .4s
+    width: 0
+
+  &:hover::after
+    width: 100%

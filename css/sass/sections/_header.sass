@@ -1,0 +1,16 @@
+.header
+  display: flex
+  flex-direction: column
+
+  // Alter Sections in current section
+  .navigation
+    order: 2
+
+    @media screen and (max-width: 991px)
+      order: 1
+
+  .header-content
+    order: 1
+
+    @media screen and (max-width: 991px)
+      order: 2

@@ -1,0 +1,181 @@
+.slider
+  margin-bottom: 28px
+  position: relative
+
+  .slides
+    list-style: none
+    margin: 0
+    padding: 0
+
+    img
+      display: block
+      height: auto
+      max-width: 100%
+      width: 100%
+
+    &__item
+      position: relative
+
+      &:not(.current)
+        display: none
+
+      &-content
+        left: 0
+        margin: auto
+        max-width: 1170px
+        position: absolute
+        right: 100px
+        top: 52px
+
+        @media screen and (max-width: 1199px)
+          max-width: 100%
+          position: relative
+          top: 0
+
+        p
+          margin: 0
+
+          & + p
+            margin-top: 10px
+
+        &-inner
+          background-color: rgba(0,0,0,.6)
+          color: $layout-light-color
+          margin-left: auto
+          max-width: 375px
+          padding: 30px 30px 20px 32px
+
+          @media screen and (max-width: 1199px)
+            align-items: center
+            background-color: $layout-dark-color-darker
+            display: flex
+            flex-direction: column
+            max-width: 100%
+            padding: 30px 20px
+            text-align: center
+
+          & > div + div
+            margin-top: 40px
+
+            @media screen and (max-width: 767px)
+              margin-top: 20px
+
+      &-title
+        font-size: 2rem
+        line-height: 1.1
+        margin: 0
+        text-transform: uppercase
+
+        @media screen and (max-width: 767px)
+          font-size: 1.5rem
+
+      &-description
+        font-size: 1.375rem
+        font-weight: bold
+        margin-bottom: 50px
+
+        @media screen and (max-width: 767px)
+          font-size: 1rem
+          margin-bottom: 25px
+
+  &__controls
+    bottom: 0
+    left: 0
+    margin: auto
+    max-width: 1170px
+    position: absolute
+    right: 0
+    width: 100%
+
+    &-direction
+      align-items: center
+      bottom: 25px
+      display: flex
+      justify-content: space-between
+      left: 0
+      list-style: none
+      margin: 0
+      padding: 0
+      position: absolute
+      width: 100%
+
+      @media screen and (max-width: 767px)
+        display: none
+
+      button
+        background: none
+        border: 7px solid transparent
+        display: block
+        font-size: 0
+        height: 45px
+        padding: 0
+        position: relative
+        transition: .4s
+        width: 51px
+        z-index: 1
+
+        &::after
+          background-color: $layout-accent-color
+          bottom: -7px
+          content: ""
+          display: block
+          left: -7px
+          overflow: hidden
+          position: absolute
+          right: -7px
+          top: -7px
+          transition: .4s
+          width: 0
+          z-index: 1
+
+        &::before
+          bottom: 0
+          content: ""
+          display: block
+          left: 0
+          position: absolute
+          right: 0
+          top: 0
+          z-index: 2
+          +background-image-contain("../imgs/arrow-right.svg")
+
+        &.prev
+          transform: rotate(180deg)
+
+        &:hover
+          cursor: pointer
+
+          &::after
+            opacity: 1
+            width: 51px
+
+    &-pagging
+      align-items: center
+      bottom: -28px
+      display: flex
+      justify-content: center
+      left: 0
+      list-style: none
+      margin: 0
+      padding: 0
+      position: absolute
+      width: 100%
+
+      li + li
+        margin-left: 15px
+
+      button
+        background-color: $layout-dark-color-more-lighter
+        border-radius: 50%
+        border: none
+        display: block
+        font-size: 0
+        height: 8px
+        padding: 0
+        transition: .4s
+        width: 8px
+
+        &.current,
+        &:hover
+          background-color: #000
+          cursor: pointer

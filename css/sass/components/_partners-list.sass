@@ -1,0 +1,38 @@
+.partners-list
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  list-style: none
+  margin: 0
+  padding: 0
+
+  @media screen and (max-width: 1199px)
+    justify-content: center
+
+  &__item
+    margin: 10px
+    position: relative
+    transition: .4s
+
+    @media screen and (max-width: 1199px)
+      flex-shrink: 0
+      margin: 10px
+      max-width: 225px
+      text-align: center
+      width: 100%
+
+    &:hover
+      transform: rotate(-3deg)
+
+    &-img
+      display: inline-block
+
+    &-link
+      bottom: 0
+      display: block
+      font-size: 0
+      left: 0
+      position: absolute
+      right: 0
+      top: 0

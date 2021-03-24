@@ -1,0 +1,18 @@
+.back-to-top-button
+  background: none
+  border-radius: 50%
+  border: 1px solid red
+  border: none
+  display: block
+  font-size: 0
+  height: 75px
+  margin: auto
+  transform: rotate(-90deg)
+  transition: .4s
+  width: 75px
+  +background-image-to-size("../imgs/arrow-right.svg", 40px, 45px)
+
+  &:hover
+    background-color: $layout-accent-color
+    box-shadow: 0 0 10px rgba(0,0,0,.2)
+    cursor: pointer

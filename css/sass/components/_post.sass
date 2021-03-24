@@ -1,0 +1,58 @@
+.post
+  font-size: 1rem
+  line-height: 1.3
+
+  &__info
+    color: $layout-dark-color
+    font-weight: bold
+    height: 118px
+    margin-bottom: 24px
+    overflow: hidden
+
+    &-list
+      line-height: .9
+      list-style: none
+      margin: 0
+      padding: 0
+
+      & > li + li
+        margin-top: 7px
+
+  &__title
+    color: $layout-dark-color
+    font-size: 2.18rem
+    height: 105px
+    line-height: 1
+    margin: 0
+    margin-bottom: 25px
+    overflow: hidden
+    text-transform: uppercase
+
+    @media screen and (max-width: 991px)
+      font-size: 1.5em
+      height: 75px
+
+  &__actions
+    align-items: center
+    display: flex
+
+    a
+      display: block
+
+    & > a + a
+      margin-left: 15px
+
+  &_lg
+    align-items: flex-start
+    display: flex
+
+    @media screen and (max-width: 991px)
+      flex-direction: column
+
+  &_lg &
+    &__media
+      margin-right: 40px
+
+      @media screen and (max-width: 991px)
+        margin-bottom: 25px
+        margin-right: 0

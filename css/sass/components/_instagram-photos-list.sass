@@ -1,0 +1,22 @@
+.instagram-photos-list
+  align-items: center
+  display: flex
+  justify-content: flex-end
+  list-style: none
+  margin: 0
+  padding: 0
+
+  @media screen and (max-width: 1199px)
+    flex-wrap: wrap
+    justify-content: center
+
+  & > li
+    @media screen and (max-width: 1199px)
+      margin: 10px
+      max-width: 185px
+      width: 100%
+
+  img
+    display: block
+    height: auto
+    max-width: 100%
